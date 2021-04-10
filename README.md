@@ -60,7 +60,7 @@ Let us know your thoughts below. And good luck with development!
 
 ## Demo
 
-- [Start page](vue-admin-dashboard-beta.vercel.app)
+- [Start page](https://vue-admin-dashboard-beta.vercel.app/)
 
 
 

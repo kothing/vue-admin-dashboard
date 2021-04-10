@@ -41,7 +41,6 @@ axios.interceptors.request.use(
   },
   function (error) {
     // Do something with request error
-    console.log(error)
     NProgress.done()
     return Promise.reject(error)
   },
@@ -55,7 +54,6 @@ axios.interceptors.response.use(
   },
   function (error) {
     // Do something with response error
-    console.log(error)
     NProgress.done()
     return Promise.reject(error)
   },

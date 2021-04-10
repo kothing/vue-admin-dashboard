@@ -102,8 +102,7 @@
         const password = this.password
         this.$store.dispatch('login', { username, password })
           .then(() => this.$router.push('/dashboard'))
-          .catch(err => {
-            console.log(err)
+          .catch(_err => {
             this.snackbar = true
           },
           )

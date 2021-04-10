@@ -103,7 +103,7 @@ app
   })
   .get(function (req, res, next) {
     res.send({
-      access_token: 'token'
+      access_token: 'token',
     })
   })
   .post(function (req, res, next) {
@@ -118,7 +118,7 @@ app
 app.use(function (err, _req, res, _next) {
   res.status(err.status || 500)
   res.send({
-    error: err.message
+    error: err.message,
   })
 })
 
@@ -128,7 +128,7 @@ app.use(function (err, _req, res, _next) {
 app.use(function (_req, res) {
   res.status(404)
   res.send({
-    error: 'Error request !'
+    error: 'Error request !',
   })
 })
 

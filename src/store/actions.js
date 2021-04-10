@@ -10,7 +10,6 @@ export default {
         .then(response => {
           const token = response.data.access_token
           const user = response.data.username
-          console.log(response)
           // storing jwt in localStorage. https cookie is safer place to store
           localStorage.setItem('token', token)
           localStorage.setItem('user', user)
@@ -20,7 +19,6 @@ export default {
           resolve(response)
         })
         .catch(err => {
-          console.log('login error')
           commit('auth_error')
           localStorage.removeItem('token')
           reject(err)
@@ -43,21 +41,18 @@ export default {
         axios.defaults.headers.common.Authorization = 'Bearer ' + token
         commit('auth_success', { token })
       })
-      .catch(error => {
-        console.log('refresh token error')
+      .catch(_error => {
         commit('logout')
         localStorage.removeItem('token')
-        console.log(error)
       })
   },
   getTableList ({ commit }, tableName) {
     this.$http.get(`/${tableName}`)
       .then(response => {
-        console.log(response)
         const tableList = response.data.Keys
         commit('setTableList', { tableList })
       })
-      .catch(error => console.log(error))
+      .catch(_error => {})
   },
   updateTableItem ({ commit }, tableData) {
     return new Promise((resolve, reject) => {
@@ -67,7 +62,6 @@ export default {
           resolve(response)
         })
         .catch(error => {
-          console.log(error)
           reject(error)
         })
     })
@@ -94,5 +88,4 @@ export default {
   //   }
   //   )
   // },
-
 }

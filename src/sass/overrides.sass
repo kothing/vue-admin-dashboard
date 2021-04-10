@@ -1,0 +1,59 @@
+// =========================================================
+// * Vue Admin Dashboard - v1.0.0
+// =========================================================
+//
+// * Product Page: https://github.com/kothing/vue-admin-dashboard
+// * Copyright 2099 Kothing
+//
+// =========================================================
+
+// Refine style code
+@import vuetify-material/sidebar
+@import vuetify-material/appbar
+@import vuetify-material/buttons
+@import vuetify-material/pagination
+@import vuetify-material/footer
+@import vuetify-material/view
+@import vuetify-material/settings
+@import vuetify-material/card
+@import vuetify-material/table
+@import vuetify-material/tab
+@import vuetify-material/notification
+@import vuetify-material/modal
+@import vuetify-material/map
+@import vuetify-material/chip
+
+// First override all the scss variables you want and then import the files
+// $nprogress-color: #29d !default;
+// $nprogress-height: 2px !default;
+// $nprogress-spinner-opacity: 1 !default;
+// $nprogress-spinner-size: 18px !default;
+// $nprogress-spinner-stroke-width: 2px !default;
+$nprogress-color: #389df1
+$nprogress-height: 4px
+
+@import 'nprogress/css/nprogress.scss'
+
+/* Remove in 1.2 */
+.v-datatable thead th.column.sortable i 
+  vertical-align: unset
+
+
+.v-btn.v-size--default,
+.v-btn.v-size--large
+  &:not(.v-btn--icon):not(.v-btn--fab)
+    padding: 0 30px !important
+
+.theme--light.v-list-item .v-list-item__action-text,
+.theme--light.v-list-item .v-list-item__subtitle
+  color: #999
+
+.theme--light.v-text-field>.v-input__control>.v-input__slot:before
+  border-color: #d2d2d2
+
+.v-label.v-label,
+.v-alert.v-alert
+  font-size: $font-size-root
+
+.theme--light .v-main
+  background-color: #eee

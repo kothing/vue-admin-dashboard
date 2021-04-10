@@ -1,0 +1,10 @@
+{
+  "userRepos": {
+    "tobi": [
+      "https://github.com/expressjs/express",
+      "https://github.com/learnboost/cluster"
+    ],
+    "loki": ["https://github.com/learnboost/stylus"],
+    "jane": ["https://github.com/learnboost/cluster"]
+  }
+}

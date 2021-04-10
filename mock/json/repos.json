@@ -1,0 +1,16 @@
+{
+  "repos": [
+    {
+      "name": "express",
+      "url": "https://github.com/expressjs/express"
+    },
+    {
+      "name": "stylus",
+      "url": "https://github.com/learnboost/stylus"
+    },
+    {
+      "name": "cluster",
+      "url": "https://github.com/learnboost/cluster"
+    }
+  ]
+}

@@ -100,7 +100,7 @@
     },
 
     data: () => ({
-      logo: require('@/assets/avatar.png'),
+      avatar: require('@/assets/avatar.png'),
       items: [
         {
           icon: 'mdi-view-dashboard',

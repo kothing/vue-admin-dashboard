@@ -60,7 +60,7 @@ Let us know your thoughts below. And good luck with development!
 
 ## Demo
 
-- [Start page](https://github.com/kothing/vue-admin-dashboard)
+- [Start page](https://vue-admin-dashboard-beta.vercel.app/)
 
 
 

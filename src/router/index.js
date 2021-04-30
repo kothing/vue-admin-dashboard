@@ -11,7 +11,7 @@ Vue.use(Router)
 // Create a new router
 const router = new Router({
   base: process.env.BASE_URL,
-  mode: 'history',
+  mode: process.env.NODE_ENV === 'production' ? 'history' : 'hash',
   routes: routes,
 
   scrollBehavior (to, from, savedPosition) {

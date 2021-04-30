@@ -8,6 +8,7 @@ export default {
     state.authStatus = 'success'
     state.token = token
     state.user = user
+    state.authorized = true
   },
   auth_error (state) {
     state.authStatus = 'error'
@@ -15,6 +16,8 @@ export default {
   logout (state) {
     state.authStatus = ''
     state.token = ''
+    state.user = {}
+    state.authorized = false
   },
   setTableList (state, tableList) {
     state.tableList = tableList

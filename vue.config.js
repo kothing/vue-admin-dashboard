@@ -2,16 +2,16 @@ module.exports = {
   devServer: {
     open: true,
     proxy: {
-      '/admin': {
+      '/': {
         target: process.env.VUE_APP_API_URL,
         changeOrigin: true,
         ws: true,
         pathRewrite: {
-          '^/admin': '',
+          '^/': '',
         },
       },
       '/api': {
-        target: 'http://127.0.0.1:8001/',
+        target: `${process.env.VUE_APP_API_URL}/api`,
         changeOrigin: true,
         ws: true,
         pathRewrite: {

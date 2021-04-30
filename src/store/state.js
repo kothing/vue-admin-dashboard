@@ -2,6 +2,7 @@
 
 export default {
   authStatus: '',
+  authorized: localStorage.getItem('authorized') || false,
   token: localStorage.getItem('token') || '',
   user: {},
   barColor: 'rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)',

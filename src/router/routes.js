@@ -40,13 +40,12 @@ export default [
     ],
   },
   {
-    path: '/dashboard',
-    component: () =>
-      import(/* webpackChunkName: 'routes' */ '@/views/dashboard/Index'),
+    path: '/',
+    component: () => import('@/views/dashboard/Index'),
     children: [
       // Dashboard
       {
-        path: '',
+        path: '/dashboard',
         meta: {
           name: 'Dashboard',
           requiresAuth: true,

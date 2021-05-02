@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
 import i18n from '@/i18n'
-import '@/sass/overrides.sass'
+// import '@/sass/overrides.sass'
 
 Vue.use(Vuetify)
 

@@ -15,12 +15,11 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "chalk": "^4.1.1",
     "vue": "^2.6.11",
     "vue-i18n": "^8.15.3",
     "vue-meta": "^2.4.0",
     "vue-router": "^3.1.6",
-    "vuetify": "^2.4.9",
+    "vuetify": "^2.4.10",
     "vuex": "^3.1.2",
     "vuex-router-sync": "^5.0.0"
   },
@@ -35,6 +34,8 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.0.1",
     "babel-jest": "^24.9.0",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.1",
     "core-js": "^3.6.2",
     "eslint": "^6.8.0",
     "eslint-config-vuetify": "^0.4.1",

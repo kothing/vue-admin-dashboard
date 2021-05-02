@@ -1,7 +1,7 @@
 <template>
   <v-main>
     <v-container
-      class="fill-height"
+      class="page-login fill-height"
       fluid
     >
       <v-row
@@ -14,22 +14,30 @@
           md="4"
         >
           <v-card
-            class="elevation-12"
+            class="elevation-6"
+            transition="scroll-y-transition"
           >
-            <v-toolbar
-              color="general"
-            >
-              <v-toolbar-title>Admin Panel</v-toolbar-title>
-              <v-spacer />
-            </v-toolbar>
+            <v-card-title>
+              <div class="primary--text text-h4">
+                Material Admin Template
+              </div>
+            </v-card-title>
             <v-card-text>
-              <v-form>
+              <v-alert type="success">
+                Account: admin/123
+              </v-alert>
+              <v-form
+                ref="form"
+                lazy-validation
+              >
                 <v-text-field
                   ref="username"
                   v-model="username"
                   :rules="[() => !!username || 'This field is required']"
-                  prepend-icon="mdi-account"
+                  append-icon="mdi-account"
                   label="Login"
+                  type="text"
+                  outlined
                   placeholder="Kothing"
                   required
                 />
@@ -39,11 +47,11 @@
                   :rules="[() => !!password || 'This field is required']"
                   :append-icon="showPassword ? 'mdi-eye-off' : 'mdi-eye'"
                   :type="showPassword ? 'text' : 'password'"
-                  prepend-icon="mdi-lock"
                   label="Password"
                   placeholder="*********"
                   counter
                   required
+                  outlined
                   @keydown.enter="login"
                   @click:append="showPassword = !showPassword"
                 />
@@ -55,7 +63,7 @@
               <v-btn
                 align-center
                 justify-center
-                color="general"
+                color="primary"
                 @click="login"
               >
                 Login
@@ -67,13 +75,16 @@
               :top="true"
             >
               {{ errorMessages }}
-              <v-btn
-                dark
-                text
-                @click="snackbar = false"
-              >
-                Close
-              </v-btn>
+              <template v-slot:action="{ attrs }">
+                <v-btn
+                  dark
+                  text
+                  v-bind="attrs"
+                  @click="snackbar = false"
+                >
+                  Close
+                </v-btn>
+              </template>
             </v-snackbar>
           </v-card>
         </v-col>
@@ -112,7 +123,7 @@
     },
     metaInfo () {
       return {
-        title: 'Super Secret | Login',
+        title: 'Admin panel | Login',
       }
     },
   }

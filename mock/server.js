@@ -3,9 +3,9 @@
  */
 
 const express = require('express')
-const app = express()
 const chalk = require('chalk')
 
+const app = express()
 const port = 8001
 
 // CORS policy
@@ -50,5 +50,9 @@ app.use(function (_req, res) {
 /* istanbul ignore next */
 app.listen(port, function () {
   const appUrl = `http://localhost:${port}/`
-  console.log(`${chalk.green('success')} Server running at: ${chalk.green(appUrl)}`)
+  console.log(
+    `${chalk.black.bgGreen('success')} Server running at: ${chalk.green(
+      appUrl,
+    )}`,
+  )
 })
